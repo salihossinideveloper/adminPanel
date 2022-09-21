@@ -1,0 +1,59 @@
+// 
+// Widgets.scss
+// 
+
+.mini-stats-wid {
+  .mini-stat-icon {
+    overflow: hidden;
+    position: relative;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 54px;
+      background-color: rgba($white, .1);
+      left: 16px;
+      transform: rotate(32deg);
+      top: -5px;
+      transition: all 0.4s;
+    }
+
+    &::after {
+      left: -12px;
+      width: 12px;
+      transition: all 0.2s;
+    }
+  }
+
+  &:hover {
+    .mini-stat-icon {
+      &::after {
+        left: 60px;
+      }
+    }
+  }
+}
+
+
+.card-wrapper {
+  background-color: #f4f4f4;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+  &__image{
+    height: inherit;
+    img{
+      height: 190px;
+    }
+  }
+  &__title{
+    background-color: #071764;
+    color: #b39138;
+    flex-basis: 18%;
+    flex-shrink: 0;
+    border-radius: 0  0 16px 16px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,86 @@
+//font size with px
+@for $i from 10 to 100 {
+  .font-#{$i}:nth-child(n) {
+    font-size: #{$i}px !important;
+  }
+}
+
+//height in px
+@for $i from 10 to 4000 {
+  .height-#{$i}:nth-child(n) {
+    height: #{$i}px !important;
+  }
+}
+
+//width in px
+@for $i from 10 to 4000 {
+  .width-#{$i}:nth-child(n) {
+    width: #{$i}px !important;
+  }
+}
+
+//width in percent
+@for $i from 10 to 4000 {
+  .wi-#{$i}:nth-child(n) {
+    width: #{$i}#{'%'} !important;
+  }
+}
+
+//font weight in px
+@for $i from 100 to 900 {
+  .weight-#{$i}:nth-child(n) {
+    font-weight: #{$i}px !important;
+  }
+}
+
+//border radius in px
+@for $i from 5 to 200 {
+  .rounded-#{$i}:nth-child(n) {
+    border-radius: #{$i}px !important;
+  }
+}
+
+@for $i from 2 to 30 {
+  .m-#{$i*5}:nth-child(n) {
+    margin: #{$i * 5}px !important;
+  }
+  .mt-#{$i*5}:nth-child(n) {
+    margin-top: #{$i * 5}px !important;
+  }
+  .mr-#{$i*5}:nth-child(n) {
+    margin-right: #{$i * 5}px !important;
+  }
+  .mb-#{$i*5}:nth-child(n) {
+    margin-bottom: #{$i * 5}px !important;
+  }
+  .ml-#{$i*5}:nth-child(n) {
+    margin-left: #{$i * 5}px !important;
+  }
+
+  .p-#{$i*5}:nth-child(n) {
+    padding: #{$i * 5}px !important;
+  }
+  .pt-#{$i*5}:nth-child(n) {
+    padding-top: #{$i * 5}px !important;
+  }
+  .pr-#{$i*5}:nth-child(n) {
+    padding-right: #{$i * 5}px !important;
+  }
+  .pb-#{$i*5}:nth-child(n) {
+    padding-bottom: #{$i * 5}px !important;
+  }
+  .pl-#{$i*5}:nth-child(n) {
+    padding-left: #{$i * 5}px !important;
+  }
+}
+@for $i from 2 to 30{
+  .pre-#{$i}:nth-child(n) {
+    padding-right: #{$i}px !important;
+  }
+}
+
+@for $i from 5 to 80{
+  .basic-#{$i}:nth-child(n) {
+    flex-basis: #{$i}#{'%'} !important;
+  }
+}

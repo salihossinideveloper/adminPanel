@@ -1,0 +1,109 @@
+$dir-mode-align: right;
+$dir-mode-font-size-base: 13px;
+$line-height-base: 1.428571429 !default; // 20/14
+$line-height-computed: floor(($font-size-base * $line-height-base)) !default;
+// Pagination (multiple pages)
+// --------------------------------------------------
+.custom_pagination {
+  display: inline-block;
+  padding-#{$dir-mode-align}: 0;
+  margin: 13px;
+  border-radius: 4px;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      position: relative;
+      float: $dir-mode-align; // Collapse white-space
+      padding: 5px 11px;
+      line-height: 10px;
+      text-decoration: none;
+      color: #787878;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      margin-#{$dir-mode-align}: -1px;
+      border-radius: 4px;
+      margin-left: 3px;
+      font-size: 12px;
+    }
+
+    &:first-child {
+      > a,
+      > span {
+        margin-#{$dir-mode-align}: 0;
+        //@include single-side-border-radius($dir-mode-align, $border-radius-base);
+      }
+    }
+
+    &:last-child {
+      > a,
+      > span {
+        margin-left: 0;
+        //@include single-side-border-radius($dir-mode-align-inverse, $border-radius-base);
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      //color: $pagination-hover-color;
+      //background-color: $pagination-hover-bg;
+      //border-color: $pagination-hover-border;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: #3d3d3d;
+      background-color: #d9e0ed;
+      border-color: #d3dae8;
+      cursor: default;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: #c8c8c8;
+      background-color: #fff;
+      border-color: #e1e1e1;
+      cursor: default;
+    }
+  }
+}
+
+// Sizing
+// --------------------------------------------------
+$padding-large-vertical: 10px !default;
+$padding-large-horizontal: 16px !default;
+$dir-mode-font-size-base: 13px;
+$border-radius-large: 6px !default;
+$font-size-base: $dir-mode-font-size-base !default;
+$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
+$line-height-large: 1.33 !default;
+$input-border-radius-large: $border-radius-large !default;
+$input-height-large: 10px !default;
+// Large
+.pagination-lg {
+  @include pagination-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $border-radius-large);
+}
+
+$padding-small-vertical: 5px !default;
+$padding-small-horizontal: 10px !default;
+$border-radius-small: 3px !default;
+$font-size-small: ceil(($font-size-base * 0.80)) !default; // ~11px
+// Small
+.pagination-sm {
+  @include pagination-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $border-radius-small);
+}

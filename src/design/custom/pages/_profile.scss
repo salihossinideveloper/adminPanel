@@ -1,0 +1,204 @@
+.profile {
+  display: grid;
+  margin: 0 -6px;
+  height: 100vh;
+  padding: 34px 52px;
+  gap: 0 20px;
+  grid-template-columns: 340px 1fr;
+  @media screen and (max-width: 992px) {
+    &.grid-row-md-2 {
+      grid-template-rows: min-content 1fr;
+    }
+  }
+
+  .nav-sm {
+    width: 100%;
+    height: 165px;
+
+    .back {
+      right: 0;
+      top: 0;
+    }
+    .nav-sm-title{
+      bottom: 50px;
+      left: 0;
+      text-align: center;
+      right: 0;
+    }
+  }
+
+  .profile-wallet {
+    .image {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100% 0;
+    padding: 0;
+  }
+
+  &.active {
+    grid-template-rows: 0 100%;
+  }
+
+  .bg-icon {
+    left: 0;
+    top: 8px;
+
+    .icon {
+      font-size: 278px;
+    }
+  }
+
+  .sidebar {
+    @media screen and (max-width: 992px) {
+      border-radius: 0 !important;
+      .avatar-image {
+        margin-top: -45px;
+      }
+    }
+
+    .menu {
+      li {
+        &:before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 10px;
+          bottom: 10px;
+          border-right: 3px solid map-get($color, "-blue-25");
+          opacity: 0;
+          transition: all .2s ease;
+        }
+
+        &:hover {
+          &:before {
+            opacity: 0.5;
+          }
+        }
+
+        &:not(.active) {
+          a {
+            color: map-get($color, "-black-3");
+          }
+        }
+
+        .icon-box {
+          .icon {
+            transform: scale(1) !important;
+          }
+        }
+
+        @media screen and (max-width: 992px) {
+          &.active {
+            &::before {
+              border: none !important;
+            }
+          }
+          a {
+            box-shadow: 0 2px 4px map-get($color, "-black-1-15");
+            margin-bottom: 12px;
+            border-radius: 8px;
+            background-color: map-get($color, "-gray-1");
+            color: map-get($color, "-black-3") !important;
+          }
+          .icon-box {
+            width: 40px;
+            height: 40px;
+            background-color: map-get($color, "-blue-27");
+            padding: 6px !important;
+            margin-left: 15px;
+
+            .icon {
+              transform: scale(1) !important;
+            }
+
+            &::before {
+              background: linear-gradient(bottom, map-get($color, "-blue-28") -50.61%, map-get($color, "-blue-29") 100%);
+              right: 8px;
+              bottom: -14px;
+              width: 14px;
+              height: 60px;
+            }
+          }
+        }
+      }
+
+      .active {
+        &:before {
+          opacity: 1 !important;
+        }
+
+        a {
+          color: map-get($color, "-blue-25");
+        }
+      }
+    }
+  }
+
+  .avatar-image {
+    width: 92px;
+    height: 92px;
+  }
+
+  .info-box {
+    @media screen and (max-width: 992px) {
+      border: none !important;
+      background-color: map-get($color, "-gray-18") !important;
+      box-shadow: 0 2px 4px map-get($color, "-black-1-15");
+      padding: 10px 0 !important;
+      .title {
+        color: map-get($color, "-black");
+      }
+      .revival {
+        background-color: map-get($color, "-blue-31");
+        border-radius: 10px;
+        padding: 6px 12px;
+
+        span {
+          color: map-get($color, "-black");
+        }
+      }
+    }
+
+    .item {
+      &:not(:last-child) {
+        border-left: 1px solid map-get($color, "-blue-34") !important;
+      }
+    }
+  }
+
+  .purchase-list{
+    .bg-pattern{
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translate(0,-50%);
+    }
+    .purchase-image{
+      width: 72px;
+      height: 42px;
+
+      @media screen and (max-width: 450px){
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        overflow: hidden;
+      }
+    }
+    .item{
+      &:nth-child(even){
+        background: map-get($color,"-blue-30") !important;
+        &,.more,.more i,.bg-pattern i,.title{
+          color: map-get($color,"-white") !important;
+        }
+
+      }
+    }
+  }
+}

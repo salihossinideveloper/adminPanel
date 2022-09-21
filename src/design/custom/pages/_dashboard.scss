@@ -1,0 +1,170 @@
+.courses-box {
+  .nav-bar {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    .item {
+      background-color: map-get($color, "-gray-8");
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+
+      &.active {
+        border: 2px solid map-get($color, "-white");
+      }
+    }
+  }
+}
+
+.icon-bg {
+  &.icon {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    i {
+      font-size: 270px;
+    }
+  }
+}
+
+.package-box {
+  .icon-bg {
+    &.icon {
+      i {
+        font-size: 120px;
+      }
+    }
+  }
+}
+
+.wallet-box {
+  .icon-bg {
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    i {
+      opacity: 0.6;
+    }
+
+    .icon-font-ellipse-1 {
+      font-size: 150px
+    }
+
+    .icon-font-ellipse-2 {
+      font-size: 150px;
+      bottom: 0;
+      left: 0;
+      transform: rotate(1deg);
+    }
+
+    .icon-font-ellipse-3 {
+      bottom: -20px;
+      font-size: 130px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .icon-font-ellipse-1 {
+        transform: rotate(95deg);
+        top: auto;
+        bottom: 0;
+        font-size: 50px;
+      }
+      .icon-font-ellipse-2, .icon-font-ellipse-3 {
+        display: none;
+      }
+      .icon-font-ellipse-4 {
+        left: 0;
+        top: -15px;
+        bottom: 0;
+        font-size: 9rem;
+      }
+    }
+  }
+}
+
+.slider-box {
+  @media screen and (max-width: 767px) {
+    order: -1;
+  }
+}
+
+.page-links {
+  .item {
+    &:hover {
+      color: map-get($color, "-blue-15");
+
+      .icon {
+        transform: scale(1.1);
+      }
+    }
+
+    .icon-box {
+      width: 84px;
+      height: 84px;
+      border-radius: 10px;
+
+      &.bg-line {
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          width: 25px;
+          height: 100px;
+          position: absolute;
+          transform: rotate(45deg);
+          background: linear-gradient(top, map-get($color, "-gray-10") 0%, map-get($color, "-gray-11") 100%);
+        }
+        &.bg-line-top {
+          &::before {
+            left: 10px;
+            top: -20px;
+          }
+        }
+
+        &.bg-line-bottom {
+          &::before {
+            right: 10px;
+            bottom: -20px;
+          }
+        }
+      }
+
+      .icon {
+        transition: all .2s ease;
+        font-size: 50px;
+        position: relative;
+        z-index: 1;
+      }
+    }
+
+    &.small{
+      .icon-box {
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        &::before {
+          width: 15px;
+          height: 70px;
+          background: linear-gradient(bottom, map-get($color, "-blue-28") -50.61%, map-get($color, "-blue-29") 100%);
+        }
+
+        &.bg-line {
+          .icon {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}

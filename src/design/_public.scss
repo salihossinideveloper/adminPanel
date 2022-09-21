@@ -1,0 +1,7 @@
+.separator {
+  border-bottom: 1px solid #ccc !important;
+}
+
+[dir=rtl] .multiselect__select{
+  z-index: 99 !important;
+}

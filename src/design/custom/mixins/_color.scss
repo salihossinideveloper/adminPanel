@@ -1,0 +1,66 @@
+
+// =============================================================================
+// generate
+// =============================================================================
+
+@mixin generate-color($get_type : "") {
+  @if ($get_type == #{"color"}) {
+    @each $key, $value in $color {
+      .color#{$key} {
+        color: map-get($color, $key);
+      }
+      .color#{$key}-hover {
+        &:hover {
+          color: map-get($color, $key) !important;
+        }
+      }
+    }
+  } @else if ($get_type == #{"bgc"}) {
+    @each $key, $value in $color {
+      .bgc#{$key} {
+        background-color: map-get($color, $key);
+      }
+      .bgc#{$key}-hover {
+        &:hover {
+          background-color: map-get($color, $key) !important;
+        }
+      }
+    }
+  } @else if ($get_type == #{"border"}) {
+    @each $key, $value in $color {
+      .border-color#{$key} {
+        border-color: map-get($color, $key);
+      }
+      .border-color#{$key}-hover {
+        &:hover {
+          border-color: map-get($color, $key) !important;
+        }
+      }
+      .border-bottom-color#{$key} {
+        border-bottom-color: map-get($color, $key);
+      }
+      .border-bottom-color#{$key}-hover {
+        &:hover {
+          border-bottom-color: map-get($color, $key) !important;
+        }
+      }
+      .border-top-color#{$key} {
+        border-top-color: map-get($color, $key);
+      }
+      .border-top-color#{$key}-hover {
+        &:hover {
+          border-top-color: map-get($color, $key) !important;
+        }
+      }
+    }
+  }
+  @else if ($get_type == #{"icon"}) {
+    @each $key, $value in $icon-font {
+      .icon-font#{$key} {
+        &::before {
+          content: $value;
+        }
+      }
+    }
+  }
+}

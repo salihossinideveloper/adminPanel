@@ -1,0 +1,85 @@
+.login{
+  margin: 0 -6px;
+  height: 100vh;
+  &:not(.login-central){
+    .login-content{
+      border-radius: 45px 45px 0 0 !important;
+      margin-top: -42px;
+      background-color: map-get($color,"-white");
+    }
+    .login-img{
+      @media screen and (max-width: 1660px){
+        object-fit: contain;
+      }
+    }
+    .logo{
+      .icon{
+        font-size: 58px;
+      }
+    }
+  }
+  &.login-central{
+    .container{
+      height: 80vh;
+      .welcome{
+        background: linear-gradient(136deg, #006494 0%, #36428E 50%, #0F2A6D 100%);
+      }
+    }
+  }
+}
+
+.login-pattern{
+  top: 0;
+  bottom: 0;
+  &,.bottom,.top{
+    left: 0;
+    right: 0;
+  }
+  .top{
+    font-size: 272px;
+    top: -136px;
+  }
+  .bottom{
+    font-size: 186px;
+    bottom: -92px;
+  }
+}
+.login-central{
+  .login-pattern{
+    &,.bottom,.top{
+      left: 0;
+      right: 0;
+    }
+    .top{
+      font-size: 123px;
+      top: -60px;
+    }
+    .bottom{
+      font-size: 180px;
+      bottom: 70px;
+      left: -90px;
+      opacity: 0.2;
+    }
+    .circle{
+      width: 198px;
+      height: 180px;
+      opacity: 0.2;
+      border-radius: 50%;
+      right: -70px;
+      bottom: -70px;
+    }
+  }
+}
+//************** Error
+.error-preview {
+  display: block;
+  width: 100%;
+  margin-top: 0.25rem;
+  color: #f46a6a;
+  span{
+    font-size: 80%;
+    font-weight: 800;
+  }
+}
+
+

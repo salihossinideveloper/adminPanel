@@ -1,0 +1,1 @@
+export const apiUrl = 'https://app-rahbar.ir/api/v1/'

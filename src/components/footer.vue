@@ -1,0 +1,10 @@
+<template>
+  <footer class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 font-size-15">طراحی شده</div>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer -->
+</template>

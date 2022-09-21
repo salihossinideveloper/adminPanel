@@ -1,0 +1,116 @@
+{
+  "navbar": {
+    "search": {
+      "text": "جستجو"
+    },
+    "dropdown": {
+      "megamenu": {
+        "text": "منو",
+        "application": {
+          "title": "Applications",
+          "list": {
+            "calendar": "سر رسید",
+            "email": "ایمیل ها",
+            "projects": "پروژه ها",
+            "contacts": "مخاطبین"
+          }
+        }
+      },
+      "henry": {
+        "text": "کاربر",
+        "list": {
+          "profile": "پروفایل",
+          "mywallet": "کیف پول",
+          "settings": "تنظیمات",
+          "logout": "خروج"
+        }
+      }
+    }
+  },
+  "menuitems": {
+    "dashboards": {
+      "text": "خانه"
+    },
+    "blogs": {
+      "text": "بلاگ"
+    },
+    "apps": {
+      "text": "Apps"
+    },
+    "chat": {
+      "text": "پشتیبانی",
+      "badge": "New"
+    },
+    "signals": {
+      "text": "تکنیکال",
+      "list": {
+        "signalsList": "سیگنالها",
+        "template": {
+          "text": "دستیار ترید",
+          "list": {
+            "nemodar": "نمودار کلی بازار",
+            "screener": "فیلتر کردن ارزها",
+            "technichal": "ارزیابی ارزها"
+          }
+        },
+        "riskFormula": "فرمول ریسک",
+        "weeklyAnalysis": "تحلیل هفتگی"
+      }
+    },
+    "crypto": {
+      "text": "فاندامنتال",
+      "list": {
+        "wallet": "اخبار",
+        "template": {
+          "text": "انجین",
+          "list": {
+            "crypto": "کریپتو کرانت",
+            "glassNode": "گلس نود"
+          }
+        },
+        "exchange": "سوشال",
+        "lending": "پروژه",
+        "orders": "ایردراپ"
+      }
+    },
+    "ticket": {
+      "text": "پشتیبانی"
+    },
+    "invoices": {
+      "text": "آموزش",
+      "list": {
+        "invoicelist": "مقالات",
+        "course": "دوره ها",
+        "books": "جزوه ها",
+        "freeVideo": "ویدئوهای رایگان سایت",
+        "metaverse": "متاورس"
+      }
+    },
+    "portfolio": {
+      "text": "پورتفو",
+      "list": {
+        "watchList": "تعریف واچ لیست",
+        "create": "تعریف پورتفو",
+        "signal": "سیگنال پورتفو",
+        "articles": "اخبار پورتفو",
+        "connectionWallet": "اتصال کیف پول"
+      }
+    },
+    "tasks": {
+      "text": "جشنواره"
+    },
+    "admin": {
+      "text": "مدیریت",
+      "list": {
+        "users": "کاربران",
+        "tags": "تگها",
+        "categories": "دسته بندی ها",
+        "blog": "بلاگ",
+        "comments": "کامنتها",
+        "signal": "سیگنال",
+        "ticket": "تیکت",
+        "notification":"نوتیفیکیشن"
+      }
+    }
+  }
+}

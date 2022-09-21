@@ -1,0 +1,240 @@
+// 
+// _materialButton.scss
+// 
+
+button, a {
+  outline: none !important;
+}
+
+
+// Rounded Buttons
+.btn-rounded {
+  border-radius: 30px;
+}
+
+.btn-dark, .btn-secondary {
+  color: $gray-200 !important;
+}
+
+.btn-outline-light {
+  color: $gray-900;
+}
+
+.btn-outline-dark, .btn-dark {
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle,
+  &:hover {
+    color: $light;
+  }
+}
+
+// example 1
+
+.btn-group-example {
+  .btn {
+    position: relative;
+
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &:before {
+      content: "OR";
+      position: absolute;
+      font-size: 10px;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 50%;
+      background-color: $gray-600;
+      color: $light;
+      border: 1px solid $white;
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+  }
+}
+
+
+// Example 2
+
+.btn-label {
+  position: relative;
+  padding-left: 44px;
+
+  .label-icon {
+    position: absolute;
+    width: 32px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba($white, 0.1);
+    border-right: 1px solid rgba($white, 0.1);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.btn-light {
+    .label-icon {
+      background-color: rgba($dark, 0.1);
+      border-right: 1px solid rgba($dark, 0.2);
+    }
+  }
+}
+
+// custom button
+
+.move-placeholder {
+  .form-control {
+    height: 48px;
+
+    &:focus +,
+    &:not(:placeholder-shown) + {
+      .form-label {
+        top: -12px;
+        transform: translate(0, 0);
+      }
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:-ms-input-placeholder {
+      color: transparent;
+    }
+
+    &::-ms-input-placeholder {
+      color: transparent;
+    }
+  }
+
+  .form-label {
+    top: 50%;
+    right: 28px;
+    padding: 0 6px;
+    transition: all .1s ease;
+    border-radius: 50px;
+    transform: translate(0, -50%);
+    background-color: #fff;
+    cursor: pointer;
+
+    @media screen and (max-width: 360px) {
+      font-size: 12px;
+    }
+  }
+
+  //textarea.form-control {
+  //  min-height: 200px;
+  //  + .form-label {
+  //    top: 20px;
+  //    transform: translate(0, 0);
+  //  }
+  //  ~ .edit-icon {
+  //    top: 20px;
+  //    transform: translate(0, 0);
+  //  }
+  //}
+
+  &.form-control__purple {
+    .form-control {
+      color: map_get($color, "-black-1-34");
+      border: 1px solid map_get($color, "-blue-19");
+      width: 300px;
+      border-radius: 10px;
+
+      &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: map_get($color, "-transparent");
+        opacity: 1; /* Firefox */
+      }
+
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: map_get($color, "-transparent");
+      }
+
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: map_get($color, "-transparent");
+      }
+
+      &:focus {
+        color: map_get($color, "-blue-18");
+        background-color: #fff;
+        border-color: map_get($color, "-blue-18");
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem map_get($color, "-blue-18-60");
+      }
+    }
+
+    .form-label {
+      color: map_get($color, "-purple-7");
+    }
+  }
+  &.form-control__purple-outline {
+    .form-control {
+      color: map_get($color, "-gray-17");
+      border: 1px solid map_get($color, "-purple-5");
+      width: 300px;
+      border-radius: 10px;
+
+      &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: map_get($color, "-transparent");
+        opacity: 1; /* Firefox */
+      }
+
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: map_get($color, "-transparent");
+      }
+
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: map_get($color, "-transparent");
+      }
+
+      &:focus {
+        color: map_get($color, "-purple-2");
+        background-color: #fff;
+        border-color: map_get($color, "-purple-2");
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem map_get($color, "-purple-2-60");
+      }
+    }
+
+    .form-label {
+      color: map-get($color, "-purple-7");
+      background-color: map-get($color, "-gray-1");
+    }
+  }
+  &.disabled {
+    pointer-events: none;
+    user-select: none;
+
+    .form-control {
+      border: 1px solid rgb(102 102 102 / 60%) !important;
+
+      &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: map_get($color, "-transparent");
+        opacity: 1; /* Firefox */
+      }
+
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: map_get($color, "-transparent");
+      }
+
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: map_get($color, "-transparent");
+      }
+    }
+
+    .form-control, .edit-icon, .form-label {
+      background-color: map-get($color, "-gray-23") !important;
+      color: map-get($color, "-gray-22") !important;
+    }
+
+  }
+}

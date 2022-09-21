@@ -1,0 +1,60 @@
+$font-path: '../assets/fonts/iransans';
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: bold;
+  font-display: fallback;
+  src: url('#{$font-path}/IRANSansWeb_Bold.eot');
+  src: url('#{$font-path}/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/IRANSansWeb_Bold.woff2') format('woff2'),
+  url('#{$font-path}/IRANSansWeb_Bold.woff') format('woff'),
+  url('#{$font-path}/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  font-display: fallback;
+  src: url('#{$font-path}/IRANSansWeb_Medium.eot');
+  src: url('#{$font-path}/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/IRANSansWeb_Medium.woff2') format('woff2'),
+  url('#{$font-path}/IRANSansWeb_Medium.woff') format('woff'),
+  url('#{$font-path}/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url('#{$font-path}/IRANSansWeb_Light.eot');
+  src: url('#{$font-path}/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/IRANSansWeb_Light.woff2') format('woff2'),
+  url('#{$font-path}/IRANSansWeb_Light.woff') format('woff'),
+  url('#{$font-path}/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  font-display: fallback;
+  src: url('#{$font-path}/IRANSansWeb.eot');
+  src: url('#{$font-path}/IRANSansWeb.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/IRANSansWeb.woff2') format('woff2'),
+  url('#{$font-path}/IRANSansWeb.woff') format('woff'),
+  url('#{$font-path}/IRANSansWeb.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'icon-font';
+  src: url('custom/fonts/icon-fonts/fontello.eot?56906476');
+  src: url('custom/fonts/icon-fonts/fontello.eot?56906476#iefix') format('embedded-opentype'),
+  url('custom/fonts/icon-fonts/fontello.woff2?56906476') format('woff2'),
+  url('custom/fonts/icon-fonts/fontello.woff?56906476') format('woff'),
+  url('custom/fonts/icon-fonts/fontello.ttf?56906476') format('truetype'),
+  url('custom/fonts/icon-fonts/fontello.svg?56906476#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
